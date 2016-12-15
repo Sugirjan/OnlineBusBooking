@@ -74,13 +74,9 @@
 
     <!-- Header Starts -->
     <div class="header">
-        <a href="welcome.blade.php"><img src="images/logo.png" alt="Realestate"></a>
+        <a href="welcome.blade.php"><img src="images/logo.png" alt="Realestate"><h2></a>
 
-        {{--<ul class="pull-right">--}}
-            {{--<li><a href="buysalerent.php">Buy</a></li>--}}
-            {{--<li><a href="buysalerent.php">Sale</a></li>--}}
-            {{--<li><a href="buysalerent.php">Rent</a></li>--}}
-        {{--</ul>--}}
+        
     </div>
     <!-- #Header Starts -->
 </div>
