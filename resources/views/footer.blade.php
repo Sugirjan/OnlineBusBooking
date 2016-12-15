@@ -12,13 +12,13 @@
                 <h4>Information</h4>
                 <ul class="row">
                     <li class="col-lg-12 col-sm-12 col-xs-3"><a href="about.php">About</a></li>
-                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="agents.php">Agents</a></li>
+                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="agents.php">Travel Agents</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-3 col-sm-3">
                 <h4>Newsletter</h4>
-                <p>Get notified about the latest properties in our marketplace.</p>
+                <p>Get notified about the latest offers.</p>
                 <form class="form-inline" role="form">
                     <input type="text" placeholder="Enter Your email address" class="form-control">
                     <button class="btn btn-success" type="button">Notify Me!</button></form>
@@ -34,13 +34,13 @@
 
             <div class="col-lg-3 col-sm-3">
                 <h4>Contact us</h4>
-                <p><b>Bootstrap Realestate Inc.</b><br>
-                    <span class="glyphicon glyphicon-map-marker"></span> MOratuwa<br>
-                    <span class="glyphicon glyphicon-envelope"></span> hello@bootstrapreal.com<br>
-                    <span class="glyphicon glyphicon-earphone"></span> (123) 456-7890</p>
+                <p><b>InSpira Inc.</b><br>
+                    <span class="glyphicon glyphicon-map-marker"></span> Moratuwa<br>
+                    <span class="glyphicon glyphicon-envelope"></span> www.inspira.com<br>
+                    <span class="glyphicon glyphicon-earphone"></span> (094) 0768489892</p>
             </div>
         </div>
-        <p class="copyright">Copyright 2013. All rights reserved.	</p>
+        <p class="copyright">Copyright 2016. All rights reserved.	</p>
 
 
     </div></div>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-sm-6">
                     <h4>New User Sign Up</h4>
-                    <p>Join today and get updated with all the properties deal happening around.</p>
+                    <p>Join today and enjoy all the offers provided by us.</p>
                     <button type="submit" class="btn btn-info"  onclick="window.location.href='register.php'">Join Now</button>
                 </div>
 
