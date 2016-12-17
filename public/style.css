@@ -46,7 +46,7 @@ table{background-color: #fff;}
 .header ul li a:hover{text-decoration: none;}
 
 .navbar-inverse{background-color: #111;}
-.navbar-inverse .navbar-nav > li > a{font-size: 11px;padding-top: 10px;padding-bottom: 10px;font-family: din;text-transform: uppercase;}
+.navbar-inverse .navbar-nav > li > a{font-size: 12px;padding-top: 20px;padding-bottom: 20px;font-family: din;text-transform: uppercase;}
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{background-color: #72b70f;}
 
 .banner-search{background:url(../images/bginside.jpg) #111;color: #fff;padding: 20px 0 10px 0; font-size: 16px;}
@@ -103,7 +103,7 @@ table{background-color: #fff;}
 .property-info{margin:0 0 30px 0;}
 .property-info span{margin-right: 5px;}
 .property-info p{margin-bottom:10px; }
-.property-info p.price{font-size: 28px;color: #72b70f;padding:0;border-radius: 5px;}
+.property-info p.price{font-size: 12px;color: #72b70f;padding:0;border-radius: px;}
 .property-info .profile{margin-top: 30px;}
 .property-info .profile p{padding-left: 20px; color: #999;}
 

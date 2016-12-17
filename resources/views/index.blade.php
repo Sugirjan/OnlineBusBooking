@@ -88,36 +88,60 @@
         <div class="col-lg-6 col-sm-6">
           {{--<input type="text" class="form-control" placeholder="Search of Properties">--}}
           <div class="row">
-            <div class="col-lg-3 col-sm-3 ">
-              <select class="form-control">
-                <option>Batticaloa</option>
-                <option>Jaffna</option>
-                <option>Colombo</option>
+
+            <form action="/timetable" method="post">
+              {{ csrf_field() }}
+            <div class="col-lg-4 col-sm-4 ">
+              <select name="departure" class="form-control form-group" >
+                <option selected disabled>Departure place</option>
+                @foreach($routes as $departure)
+                  {{--<option value="{{$departure->route_id}}">--}}
+                        <option>
+                    {{$departure->place1}}
+                  </option>
+                @endforeach
               </select>
             </div>
-            <div class="col-lg-3 col-sm-4">
-              <select class="form-control">
-                  <option>Batticaloa</option>
-                  <option>Jaffna</option>
-                  <option>Colombo</option>
+            <div class="col-lg-4 col-sm-4">
+              <select name="arrival" class="form-control" id="arr">
+                  <option selected disabled>Arrival place</option>
+                  @foreach($routes as $arrival)
+                    {{--<option value="{{$arrival->route_id}}">--}}
+                      <option>
+                      {{$arrival->place2}}
+                    </option>
+                    @endforeach
               </select>
             </div>
 
-
-              <div class="col-lg-3 col-sm-4">
-              <button class="btn btn-success"  onclick="window.location.href='buysalerent.php'">Search Now</button>
+            <div class="input-group col-lg-4 col-sm-4">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar-check-o">
+                </i>
               </div>
+              <input class="form-control" id="date" name="date" placeholder="Choose a date" type="text"/>
+            </div>
+
+            {{--<div class="">--}}
+              <div class="col-lg-4 col-lg-offset-4 col-sm-4">
+                <button class="btn btn-success" type="submit">Search Now</button>
+              </div>
+            {{--</div>--}}
+
+            </form>
+
+
           </div>
-
-
         </div>
+
         <div class="col-lg-5 col-lg-offset-1 col-sm-6 ">
           <p>Join now and get updated with details and enjoy our offers.</p>
-          <button class="btn btn-info"   data-toggle="modal" data-target="#loginpop">Login</button>        </div>
+          <button class="btn btn-info"  data-toggle="modal" data-target="#loginpop">Login</button>        </div>
       </div>
     </div>
   </div>
 </div>
+
 <!-- banner -->
 <div class="container">
   <div class="properties-listing spacer"> <a href="buysalerent.php" class="pull-right viewall">View All Listing</a>

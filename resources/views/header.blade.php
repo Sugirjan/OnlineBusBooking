@@ -21,12 +21,41 @@
 
 
     <!-- slitslider -->
+
     <link rel="stylesheet" type="text/css" href={{URL::asset('slitslider\css\style.css')}} />
     <link rel="stylesheet" type="text/css" href={{URL::asset('slitslider\css\custom.css')}} />
     <script type="text/javascript" src={{URL::asset('slitslider\js\modernizr.custom.79639.js')}}></script>
     <script type="text/javascript" src={{URL::asset('slitslider\js\jquery.ba-cond.min.js')}}></script>
     <script type="text/javascript" src={{URL::asset('slitslider\js\jquery.slitslider.js')}}></script>
     <!-- slitslider -->
+
+    <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    <!-- Inline CSS based on choices in "Settings" tab -->
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+    <script>
+        $(document).ready(function(){
+            var date=$('input[name="date"]'); //our date input has the name "date"
+            var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+            date.datepicker({
+                format: 'dd/mm/yyyy',
+                orientation:'top left',
+                startDate:new Date(),
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            })
+        })
+    </script>
 
 </head>
 
@@ -47,7 +76,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
+            <a class="navbar-brand"><img src="images/logo.png" height="35px" class="imag-responsive img-circle"></a>
             </div>
 
 
@@ -70,13 +99,13 @@
 
 
 
-<div class="container">
+{{--<div class="container">--}}
 
-    <!-- Header Starts -->
-    <div class="header">
-        <a href="welcome.blade.php"><img src="images/logo.png" alt="Realestate"><h2></a>
+    {{--<!-- Header Starts -->--}}
+    {{--<div class="header">--}}
+        {{--<a href="welcome.blade.php"><img src="images/logo.png" alt="Realestate"><h2></h2></a>--}}
 
-        
-    </div>
-    <!-- #Header Starts -->
-</div>
+        {{----}}
+    {{--</div>--}}
+    {{--<!-- #Header Starts -->--}}
+{{--</div>--}}
