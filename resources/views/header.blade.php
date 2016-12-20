@@ -46,6 +46,14 @@
         $(document).ready(function(){
             var date=$('input[name="date"]'); //our date input has the name "date"
             var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+
+          //  var dates = new Date(arr[2]+"-"+arr[1]+"-"+arr[0]);
+//            var d = dates.getDate();
+//            var m = dates.getMonth();
+//            var y = dates.getFullYear();
+           // var minDate = new Date(y, m+1, d);
+//            $("#EndDate").datepicker('setDate', minDate);
+
             date.datepicker({
                 format: 'dd/mm/yyyy',
                 orientation:'top left',

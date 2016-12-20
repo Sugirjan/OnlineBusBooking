@@ -39,7 +39,7 @@ Route::get('/','route_controller@booking');
 
 Route::post('/timetable','route_controller@showBus');
 
-Route::post('/getSeats','route_controller@showSeats');
+Route::post('/showSeats','seat_controller@showSeatPage');
 
 Route::get('/addroute','route_controller@getroute');
 
@@ -49,4 +49,23 @@ Route::get('/addnewbus','route_controller@getnewbus');
 
 Route::post('/addnewbus','route_controller@addnewbus');
 
-Route::get('/a','page_controller@showseatpage');
+Route::get('/a','seat_controller@showseatpage');
+
+Route::post('/seatno','seat_controller@getOccupiedSeats');
+
+Route::get('/lastStep' , function (){
+    return view('lastStep');
+});
+
+Route::get('/detail' , function (){
+    return view('detail');
+});
+
+//Route::post('/seatno','seat_controller@getOccupiedSeats');
+Route::post('/payment','seat_controller@payment');
+
+Route::post('/end','seat_controller@end');
+
+Route::get('/register' , function (){
+    return view('Register');
+});

@@ -94,7 +94,7 @@
             <div class="col-lg-4 col-sm-4 ">
               <select name="departure" class="form-control form-group" >
                 <option selected disabled>Departure place</option>
-                @foreach($routes as $departure)
+                @foreach($places1 as $departure)
                   {{--<option value="{{$departure->route_id}}">--}}
                         <option>
                     {{$departure->place1}}
@@ -105,8 +105,7 @@
             <div class="col-lg-4 col-sm-4">
               <select name="arrival" class="form-control" id="arr">
                   <option selected disabled>Arrival place</option>
-                  @foreach($routes as $arrival)
-                    {{--<option value="{{$arrival->route_id}}">--}}
+                  @foreach($places2 as $arrival)
                       <option>
                       {{$arrival->place2}}
                     </option>
@@ -121,13 +120,10 @@
               </div>
               <input class="form-control" id="date" name="date" placeholder="Choose a date" type="text"/>
             </div>
-
-            {{--<div class="">--}}
               <div class="col-lg-4 col-lg-offset-4 col-sm-4">
-                <button class="btn btn-success" type="submit">Search Now</button>
+v
+                  <button class="btn btn-success" type="submit" >Search Now</button>
               </div>
-            {{--</div>--}}
-
             </form>
 
 
@@ -143,54 +139,54 @@
 </div>
 
 <!-- banner -->
-<div class="container">
-  <div class="properties-listing spacer"> <a href="buysalerent.php" class="pull-right viewall">View All Listing</a>
-    <h2>Top Bus Routes And Bus Schedules</h2>
-    <div id="owl-example" class="owl-carousel">
-      <div class="properties">
-        <div class="image-holder"><img src={{URL::asset('images/properties/1.jpg')}} class="img-responsive" alt="properties"/>          
-        </div>
-        <h4><a href="property-detail.php">Wellawatta - Jaffna</a></h4>
-        <p>From Wellawatta: 07.00 PM (Super Luxury)</p>
-        <p>From Jaffna: 07.15 PM (Super Luxury)</p>       
-        <a class="btn btn-primary" href="property-detail.php">View Details</a>
-      </div>
+{{--<div class="container">--}}
+  {{--<div class="properties-listing spacer"> <a href="buysalerent.php" class="pull-right viewall">View All Listing</a>--}}
+    {{--<h2>Top Bus Routes And Bus Schedules</h2>--}}
+    {{--<div id="owl-example" class="owl-carousel">--}}
+      {{--<div class="properties">--}}
+        {{--<div class="image-holder"><img src={{URL::asset('images/properties/1.jpg')}} class="img-responsive" alt="properties"/>          --}}
+        {{--</div>--}}
+        {{--<h4><a href="property-detail.php">Wellawatta - Jaffna</a></h4>--}}
+        {{--<p>From Wellawatta: 07.00 PM (Super Luxury)</p>--}}
+        {{--<p>From Jaffna: 07.15 PM (Super Luxury)</p>       --}}
+        {{--<a class="btn btn-primary" href="property-detail.php">View Details</a>--}}
+      {{--</div>--}}
 
-      <div class="properties">
-        <div class="image-holder"><img src={{URL::asset('images/properties/2.jpg')}} class="img-responsive" alt="properties"/>          
-        </div>
-        <h4><a href="property-detail.php">Colombo - Kataragama</a></h4>        
-        <p>From Colombo: 06.30 AM (Super Luxury)</p>
-        <p>From Kataragama: 03.15 PM (Super Luxury)</p>
-        <a class="btn btn-primary" href="property-detail.php">View Details</a>
-      </div>
-      <div class="properties">
-        <div class="image-holder"><img src={{URL::asset('images/properties/3.jpg')}} class="img-responsive" alt="properties"/>          
-        </div>
-        <h4><a href="property-detail.php">Colombo - Kandy</a></h4>        
-        <p>From Colombo: 04.30 AM (Super Luxury)</p>
-        <p>From Kandy: 04.15 PM (Super Luxury)</p>
-        <a class="btn btn-primary" href="property-detail.php">View Details</a>
-      </div>
-      <div class="properties">
-        <div class="image-holder"><img src={{URL::asset('images/properties/5.jpg')}} class="img-responsive" alt="properties"/>          
-        </div>
-        <h4><a href="property-detail.php">Colombo - Galle</a></h4>        
-        <p>From Colombo: 06.30 AM (Normal)</p>
-        <p>From Galle: 07.15 AM (Normal)</p>
-        <a class="btn btn-primary" href="property-detail.php">View Details</a>
-      </div>
+      {{--<div class="properties">--}}
+        {{--<div class="image-holder"><img src={{URL::asset('images/properties/2.jpg')}} class="img-responsive" alt="properties"/>          --}}
+        {{--</div>--}}
+        {{--<h4><a href="property-detail.php">Colombo - Kataragama</a></h4>        --}}
+        {{--<p>From Colombo: 06.30 AM (Super Luxury)</p>--}}
+        {{--<p>From Kataragama: 03.15 PM (Super Luxury)</p>--}}
+        {{--<a class="btn btn-primary" href="property-detail.php">View Details</a>--}}
+      {{--</div>--}}
+      {{--<div class="properties">--}}
+        {{--<div class="image-holder"><img src={{URL::asset('images/properties/3.jpg')}} class="img-responsive" alt="properties"/>          --}}
+        {{--</div>--}}
+        {{--<h4><a href="property-detail.php">Colombo - Kandy</a></h4>        --}}
+        {{--<p>From Colombo: 04.30 AM (Super Luxury)</p>--}}
+        {{--<p>From Kandy: 04.15 PM (Super Luxury)</p>--}}
+        {{--<a class="btn btn-primary" href="property-detail.php">View Details</a>--}}
+      {{--</div>--}}
+      {{--<div class="properties">--}}
+        {{--<div class="image-holder"><img src={{URL::asset('images/properties/5.jpg')}} class="img-responsive" alt="properties"/>          --}}
+        {{--</div>--}}
+        {{--<h4><a href="property-detail.php">Colombo - Galle</a></h4>        --}}
+        {{--<p>From Colombo: 06.30 AM (Normal)</p>--}}
+        {{--<p>From Galle: 07.15 AM (Normal)</p>--}}
+        {{--<a class="btn btn-primary" href="property-detail.php">View Details</a>--}}
+      {{--</div>--}}
 
-      <div class="properties">
-        <div class="image-holder"><img src={{URL::asset('images/properties/4.jpg')}} class="img-responsive" alt="properties"/></div>
-        <h4><a href="property-detail.php">Colombo - Batticaloa</a></h4>
-        <p>From Colombo: 08.30 pM (Super Luxury)</p>
-        <p>From Batticaloa: 08.00 PM (Super Luxury)</p>       
-        <a class="btn btn-primary" href="property-detail.php">View Details</a>
-      </div>
+      {{--<div class="properties">--}}
+        {{--<div class="image-holder"><img src={{URL::asset('images/properties/4.jpg')}} class="img-responsive" alt="properties"/></div>--}}
+        {{--<h4><a href="property-detail.php">Colombo - Batticaloa</a></h4>--}}
+        {{--<p>From Colombo: 08.30 pM (Super Luxury)</p>--}}
+        {{--<p>From Batticaloa: 08.00 PM (Super Luxury)</p>       --}}
+        {{--<a class="btn btn-primary" href="property-detail.php">View Details</a>--}}
+      {{--</div>--}}
 
-    </div>
-  </div>
+    {{--</div>--}}
+  {{--</div>--}}
 
   <div class="spacer">
     <div class="row">

@@ -16,45 +16,45 @@
         <div class="row">
             <div class="col-lg-3 col-sm-4 hidden-xs">
 
-                <div class="hot-properties hidden-xs" >
-                    <h4>Hot Properties</h4>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5">
-                            <img src = {{URL::asset('images/properties/4.jpg')}} class="img-responsive" alt="properties"></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5><a href="welcome.blade.php">Integer sed porta quam</a></h5>
-                            <p class="price">$300,000</p> </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src={{URL::asset('images/properties/1.jpg')}} class="img-responsive" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5><a href="welcome.blade.php">Integer sed porta quam</a></h5>
-                            <p class="price">$300,000</p> </div>
-                    </div>
+                {{--<div class="hot-properties hidden-xs" >--}}
+                    {{--<h4>Hot Properties</h4>--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-lg-4 col-sm-5">--}}
+                            {{--<img src = {{URL::asset('images/properties/4.jpg')}} class="img-responsive" alt="properties"></div>--}}
+                        {{--<div class="col-lg-8 col-sm-7">--}}
+                            {{--<h5><a href="welcome.blade.php">Integer sed porta quam</a></h5>--}}
+                            {{--<p class="price">$300,000</p> </div>--}}
+                    {{--</div>--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-lg-4 col-sm-5"><img src={{URL::asset('images/properties/1.jpg')}} class="img-responsive" alt="properties"/></div>--}}
+                        {{--<div class="col-lg-8 col-sm-7">--}}
+                            {{--<h5><a href="welcome.blade.php">Integer sed porta quam</a></h5>--}}
+                            {{--<p class="price">$300,000</p> </div>--}}
+                    {{--</div>--}}
 
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src={{URL::asset('images/properties/3.jpg')}} class="img-responsive" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5><a href="welcome.blade.php">Integer sed porta quam</a></h5>
-                            <p class="price">$300,000</p> </div>
-                    </div>
+                    {{--<div class="row">--}}
+                        {{--<div class="col-lg-4 col-sm-5"><img src={{URL::asset('images/properties/3.jpg')}} class="img-responsive" alt="properties"/></div>--}}
+                        {{--<div class="col-lg-8 col-sm-7">--}}
+                            {{--<h5><a href="welcome.blade.php">Integer sed porta quam</a></h5>--}}
+                            {{--<p class="price">$300,000</p> </div>--}}
+                    {{--</div>--}}
 
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src={{URL::asset('images/properties/2.jpg')}} class="img-responsive" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5><a href="welcome.blade.php">Integer sed porta quam</a></h5>
-                            <p class="price">$300,000</p> </div>
-                    </div>
+                    {{--<div class="row">--}}
+                        {{--<div class="col-lg-4 col-sm-5"><img src={{URL::asset('images/properties/2.jpg')}} class="img-responsive" alt="properties"/></div>--}}
+                        {{--<div class="col-lg-8 col-sm-7">--}}
+                            {{--<h5><a href="welcome.blade.php">Integer sed porta quam</a></h5>--}}
+                            {{--<p class="price">$300,000</p> </div>--}}
+                    {{--</div>--}}
 
-                </div>
+                {{--</div>--}}
 
 
 
-                <div class="advertisement">
-                    <h4>Advertisements</h4>
-                    <img src={{URL::asset('images/advertisements.jpg')}} class="img-responsive" alt="advertisement">
+                {{--<div class="advertisement">--}}
+                    {{--<h4>Advertisements</h4>--}}
+                    {{--<img src={{URL::asset('images/advertisements.jpg')}} class="img-responsive" alt="advertisement">--}}
 
-                </div>
+                {{--</div>--}}
 
             </div>
 
