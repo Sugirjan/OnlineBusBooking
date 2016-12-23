@@ -62,7 +62,7 @@
               </blockquote>
             </div>
           </div>
-        </div><!-- /sl-slider -->
+        </div>
 
 
 
@@ -74,7 +74,7 @@
           <span></span>
         </nav>
 
-      </div><!-- /slider-wrapper -->
+      </div>
 </div>
 
 
@@ -97,7 +97,7 @@
                 @foreach($places1 as $departure)
                   {{--<option value="{{$departure->route_id}}">--}}
                         <option>
-                    {{$departure->place1}}
+                    {{$departure->town_name}}
                   </option>
                 @endforeach
               </select>
@@ -107,7 +107,7 @@
                   <option selected disabled>Arrival place</option>
                   @foreach($places2 as $arrival)
                       <option>
-                      {{$arrival->place2}}
+                      {{$arrival->town_name}}
                     </option>
                     @endforeach
               </select>
@@ -121,7 +121,7 @@
               <input class="form-control" id="date" name="date" placeholder="Choose a date" type="text"/>
             </div>
               <div class="col-lg-4 col-lg-offset-4 col-sm-4">
-v
+
                   <button class="btn btn-success" type="submit" >Search Now</button>
               </div>
             </form>
@@ -130,8 +130,8 @@ v
           </div>
         </div>
 
-        <div class="col-lg-5 col-lg-offset-1 col-sm-6 ">
-          <p>Join now and get updated with details and enjoy our offers.</p>
+        <div class="col-lg-5 col-lg-offset-1 col-sm-6">
+          <p>You can become a partner in this service.</p>
           <button class="btn btn-info"  data-toggle="modal" data-target="#loginpop">Login</button>        </div>
       </div>
     </div>

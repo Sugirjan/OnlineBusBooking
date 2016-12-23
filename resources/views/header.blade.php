@@ -55,7 +55,7 @@
 //            $("#EndDate").datepicker('setDate', minDate);
 
             date.datepicker({
-                format: 'dd/mm/yyyy',
+                format: 'yyyy-mm-dd',
                 orientation:'top left',
                 startDate:new Date(),
                 container: container,
@@ -92,7 +92,7 @@
             <div class="navbar-collapse  collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>          <!--This for links-->
+                    <li><a href="/about">About</a></li>          <!--This for links-->
                 </ul>
             </div>
             <!-- #Nav Ends -->

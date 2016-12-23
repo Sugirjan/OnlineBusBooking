@@ -11,27 +11,53 @@
 
 
 <div class="container">
-    <div class="spacer">
+    <div class="spacer ">
         <div class="row register">
-            <div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 ">
+            <form action="/register" method="post">
+                <div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 ">
 
 
-                <input type="text" class="form-control" placeholder="Full Name" name="form_name">
-                <input type="text" class="form-control" placeholder="Enter Email" name="form_email">
-                <input type="password" class="form-control" placeholder="Password" name="form_phone">
-                <input type="password" class="form-control" placeholder="Confirm Password" name="form_phone">
+                    {{csrf_field()}}
+                    <input type="text" class="form-control" placeholder="Company Name" name="form_name" onkeypress="return lettersOnly(event)" required>
+                    <input type="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Enter Email" name="form_email" required>
+                    <input type="password" class="form-control" placeholder="Password" name="form_pass1" required>
+                    <input type="password" class="form-control" placeholder="Confirm Password" name="form_pass2" required>
 
-                <textarea rows="6" class="form-control" placeholder="Address" name="form_message"></textarea>
-                <button type="submit" class="btn btn-success" name="Submit">Register</button>
-
-
+                    <button type="submit" class="btn btn-success" name="Submit">Register</button>
 
 
-            </div>
+
+                </div>
+            </form>
 
         </div>
     </div>
 </div>
+<script>
+    function lettersOnly()
+    {
+        var charCode = event.keyCode;
+
+        if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 ||charCode == 32 ||charCode == 13)
+
+            return true;
+        else
+            return false;
+    }
+    function noletters()
+    {
+        var charcode=event.keyCode;
+        if (charcode<0 )
+            return true;
+        else
+            return false;
+    }
+
+
+
+
+</script>
+
 @include('footer')
 <?php //include'footer.php';?>
 

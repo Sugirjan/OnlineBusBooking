@@ -12,7 +12,7 @@
                 <h4>Information</h4>
                 <ul class="row">
                     <li class="col-lg-12 col-sm-12 col-xs-3"><a href="about.php">About</a></li>
-                    <li class="col-lg-12 col-sm-12 col-xs-3"><a href="index.blade.php">Travel Agents</a></li>
+                    <li class="col-lg-12 col-sm-12 col-xs-3"><a>Travel Agents</a></li>
                 </ul>
             </div>
 
@@ -40,7 +40,7 @@
                     <span class="glyphicon glyphicon-earphone"></span> (094) 0768489892</p>
             </div>
         </div>
-        <p class="copyright">Copyright 2016. All rights reserved.	</p>
+        <p class="copyright">Copyright2016. All rights reserved.	</p>
 
 
     </div></div>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-sm-6">
                     <h4>New User Sign Up</h4>
-                    <p>Join today and enjoy all the offers provided by us.</p>
+                    <p>Join us and make Sri Lanka great again</p>
                     <button type="submit" class="btn btn-info"  onclick="window.location.href='register'">Join Now</button>
                 </div>
 

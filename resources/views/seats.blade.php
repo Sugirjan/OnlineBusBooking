@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 @include('header')
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html>
 <head>
     <title>Bus Ticket Reservation Widget Flat Responsive Widget Template :: w3layouts</title>
@@ -29,7 +29,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="content">
     <div class="main">
         <form action="/" onsubmit="return showarray()" method="post">
-            {{csrf_field()}}
+            {{--{{csrf_field()}}--}}
             <h1>Bus Ticket Reservation </h1>
 
             <h2>Book Your Seat Now?</h2>
@@ -65,7 +65,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
     <?php
     $data = array($arr, $tot_seat, $depar, $arriv, $dates, $bus_id, $fare, $schedule_id);
-   $extra = array($depar, $arriv, $dates, $bus_id, $fare, $schedule_id);
+    $extra = array($depar, $arriv, $dates, $bus_id, $fare, $schedule_id);
     ?>
 
     <script>
@@ -226,21 +226,55 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         var datas = {bookedSeats:arra,next:extra}
         //var dta = $.serialize(datas);
 
-        $('#seatNoButtonSubmit').click(function () {
+        $(document).ready(function (){ $('#seatNoButtonSubmit').click(function () {
             $('#seats').value = arra;
             $('.main').remove();
             $('.content').append(
-                "<p>"+JSON.stringify(datas)+"</p>"+'\
-                <form action="/payment" method="post">{{csrf_field()}}\
-                <div>\
-                <h3>You cannot cancel the seats after pay the money <h3>\
-                <input type="hidden" id="fare" name="amount" value ='+JSON.stringify(datas)+'>\
-                </div>\
-                <input type="submit"></form>'
+                '\
+             <form  class = "form-group form-horizontal " style="background-color: #d9d9d9" action="/end" method="post">{{csrf_field()}}\
+                <div class="col-lg-6">\
+                <div class="col-lg-6">\
+                <div class="container-fluid">\
+                  <div class="row">\
+                <label for="fname">First Name</label>\
+            <input type="text " class="col-md-offset-1" id="owner"  name="fname" style="" onkeypress="return lettersOnly(event)" autofocus required>\
+            </div>\
+            \
+            <div class="row">\
+               \
+                <label for="number">Contact Number</label>\
+            <input type="number" id="arrival" name="number" size="10" required >\
+            </div>\
+            \
+            <div class="row">\
+                \
+            <label for="amount">Amount</label>\
+            \
+         \
+            <input class="col-md-offset-2" name="amount" style="background-color: transparent; border-style: hidden" value='+datas["next"][4]*(datas["bookedSeats"].length)+' >\
+            </div>\
+            <div class="row"> \
+            <label for="amount">Booked Seats</label> \
+            <input   name="seats"  style="background-color: transparent; border-style: hidden" value='+JSON.stringify(datas["bookedSeats"])+'>\
+            </div>\
+            <div class="row">\
+             <input name = "submit" class = "btn btn-primary" style="background-color: #980303" type="submit" value = "Submit"></button>\
+             </div>\
+             <div class="row">\
+             </div>\
+             <div class="row">\
+              <input name = "submit" class = "btn-primary btn" style="background-color: #0076a3" type="submit" value = "Cancel"></button>\
+            <div>\
+            <input  type="hidden"  name="schedule_id" value='+datas["next"][5]+' >\
+           \
+    <input  type="hidden" name="depar" value='+datas["next"][0]+'  >\
+<input  name="arriv" type="hidden" value='+datas["next"][1]+'  >\
+<input  name="bus_id" type="hidden" value='+datas["next"][3]+' >\
+<input  name="dates" type="hidden" value='+datas["next"][2]+' >\
+\
+            </form>'
             );
-
-        });
-
+        })});
     </script>
     <?php
     $con = "<script> document.write(arra)</script>";
@@ -252,6 +286,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="seat2\js\jquery.nicescroll.js"></script>
 <script src="seat2\js\scripts.js"></script>
 
+@includes('footer');
 
 {{--@include('forms')--}}
 
@@ -292,7 +327,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </html>
 
 
-@include('footer')
+
 
 
 {{--<label for="fname">First Name</label>\--}}
@@ -307,3 +342,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 {{--<label for="amount">Amount</label> \--}}
 {{--<input type="submit" style="position: absolute; left: -9999px"/>--}}
+
+{{--<div class = col-md-12>\--}}
+{{--<div class="col-md-5">\--}}
+{{--<form  class = "form-group form-horizontal form-control-static" style="background-color: #d9d9d9" action="/payment" method="post">{{csrf_field()}}\--}}
+{{--<div>\--}}
+{{--<div class="row ">\--}}
+{{--<div class="col-md-10">\--}}
+{{--<label for="fname">First Name</label>\--}}
+{{--<input type="text " class="col-md-offset-1" id="owner"  name="fname" style="" onkeypress="return lettersOnly(event)" autofocus required>\--}}
+{{--</div>\--}}
+{{--</div>\--}}
+{{--<div class="row">\--}}
+{{--<div class="col-lg-10">\--}}
+{{--<label for="number">Contact Number</label>\--}}
+{{--<input type="number" id="arrival" name="number" size="10" required >\--}}
+{{--</div>\--}}
+{{--</div>\--}}
+{{--<div class="row">\--}}
+{{--<div class= col-lg-10>\--}}
+{{--<label for="amount">Amount</label>\--}}
+{{--<input class="col-md-offset-2" name="amount" value='+datas["next"][4]*(datas["bookedSeats"].length)+' >\--}}
+{{--</div>\--}}
+{{--</div>\--}}
+{{--</div>\--}}
+{{--</div>\--}}
+{{--</div>\--}}
+
+
+{{--<input type="hidden"  name="schedule_id" value='+datas["next"][5]+' >\--}}
+{{--<input  type="hidden" name="depar" value='+datas["next"][0]+'  >\--}}
+{{--<input  name="arriv" type="hidden" value='+datas["next"][1]+'  >\--}}
+{{--<input  name="bus_id" type="hidden" value='+datas["next"][3]+' >\--}}
+{{--<input  name="dates" type="hidden" value='+datas["next"][2]+' >\--}}
+{{--<input   name="seats" type="hidden" value='+JSON.stringify(datas["bookedSeats"])+'>\--}}
+{{--<div class="col-md-1">\--}}
+{{--<input class= col-md-2" type="submit"></form>\--}}
+{{--</div>\--}}
+

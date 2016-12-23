@@ -38,7 +38,7 @@
                             </div>
                                 <div class="col-lg-6">
 
-                            <h3><a href="property-detail.php">{{$place->company_name}}</a></h3>
+                            <h2><a>{{$place->company_name}}</a></h2>
                             <p class="price">{{$place->bus_type}}</p>
                             <p class="price">{{$place->departure_time}}{{"   "}}  -{{"   "}}  {{$place->arrival_time}}</p>
                             <p class="price">total seats:  {{$place->total_seats}}  </p>

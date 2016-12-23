@@ -1,6 +1,13 @@
-@include('header')
+@extends('forms')
+@if(Session::has('flash_message'))
+    <div class="alert alert-success"><span class="glyphicon glyphicon-ok"></span><em> {!! session('flash_message') !!}</em></div>
+@endif
+@if(Session::has('flash_message_delete'))
+    <div class="alert alert-danger"><span class="glyphicon glyphicon-ok"></span><em> {!! session('flash_message_delete') !!}</em></div>
+@endif
 <h3>Add New Bus</h3>
 <div>
+
     <form action="/addnewbus" method="post">
         {{csrf_field()}}
         <label for="busid">Bus ID</label>
@@ -36,41 +43,10 @@
         <input type="number" id="type" name="tseats" required>
 
 
-        <input type="submit" value="Submit">
+        <input type="submit" name="submit" value="Submit">
+        <input type="submit" onclick="window.location.replace('/operator')" name="cancel" value="Cancel">
     </form>
-    <script>
-        function lettersOnly()
-        {
-            var charCode = event.keyCode;
-
-            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 ||charCode == 32)
-
-                return true;
-            else
-                return false;
-        }
 
 
-    </script>
-    <?php
- /*   $conn=mysqli_connect("localhost", "root", "ABIpiri99*");
-    mysqli_select_db( $conn,"inspirabooking");
-
-    // If the form has been submitted
-
-    $bus_id=$_POST['busid'];
-    $route_id=$_POST['routeid'];
-    $company=$_POST['company'];
-    $bus_type=$_POST['bustype'];
-    $fare=$_POST['fare'];
-    $total_seats=$_POST['tseats'];
-
-
-
-    // Build an sql statment to add the route details
-    $sql="INSERT INTO bus (bus_id,route_id,company_name,bus_type,fate,total_seats) VALUES('$bus_id',$route_id','$company','bus_type','fare')";
-    $result = mysqli_query($conn,$sql);*/
-
-
-    ?>
 </div>
+
